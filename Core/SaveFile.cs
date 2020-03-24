@@ -34,5 +34,12 @@ namespace SaveEditor.Core
         {
             writer_.WriteBytes(Encoding.ASCII.GetBytes(name.PadRight(6, (char)0x00).Substring(0, 6)), 0x80);
         }
+
+        public void EnableArrows()
+        {
+            //Enables Light Arrows bitFlag which is stored at 0x32F in the savegame slot using a bitmask. Does nothing if already enabled
+            writer_.WriteByte((byte)(reader_.ReadByte(0x2A8) | 0x8), 0x2A8);
+        }
+
     }
 }

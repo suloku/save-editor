@@ -45,6 +45,8 @@
             this.fileNameTextBox = new System.Windows.Forms.TextBox();
             this.bottomStatusStrip = new System.Windows.Forms.StatusStrip();
             this.statusText = new System.Windows.Forms.ToolStripStatusLabel();
+            this.LightArrowBut = new System.Windows.Forms.Button();
+            this.LightArrowHelp = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flagTabControl.SuspendLayout();
@@ -147,6 +149,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.LightArrowHelp);
+            this.panel1.Controls.Add(this.LightArrowBut);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.saveSelectorLabel);
             this.panel1.Controls.Add(this.saveCombo);
@@ -208,6 +212,28 @@
             this.statusText.Name = "statusText";
             this.statusText.Size = new System.Drawing.Size(0, 17);
             // 
+            // LightArrowBut
+            // 
+            this.LightArrowBut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LightArrowBut.Enabled = false;
+            this.LightArrowBut.Location = new System.Drawing.Point(262, 57);
+            this.LightArrowBut.Name = "LightArrowBut";
+            this.LightArrowBut.Size = new System.Drawing.Size(75, 34);
+            this.LightArrowBut.TabIndex = 4;
+            this.LightArrowBut.Text = "Unlock Light Arrows";
+            this.LightArrowBut.UseVisualStyleBackColor = true;
+            this.LightArrowBut.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // LightArrowHelp
+            // 
+            this.LightArrowHelp.Location = new System.Drawing.Point(343, 57);
+            this.LightArrowHelp.Name = "LightArrowHelp";
+            this.LightArrowHelp.Size = new System.Drawing.Size(23, 34);
+            this.LightArrowHelp.TabIndex = 5;
+            this.LightArrowHelp.Text = "?";
+            this.LightArrowHelp.UseVisualStyleBackColor = true;
+            this.LightArrowHelp.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +280,8 @@
         private System.Windows.Forms.TextBox fileNameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.Button LightArrowBut;
+        private System.Windows.Forms.Button LightArrowHelp;
     }
 }
 

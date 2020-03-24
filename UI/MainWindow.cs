@@ -81,6 +81,7 @@ namespace SaveEditor.UI
         {
             saveCombo.Enabled = true;
             fileNameTextBox.Enabled = true;
+            LightArrowBut.Enabled = true;
 
             fileNameTextBox.Text = currentSaveFile_.GetName();
 
@@ -115,6 +116,18 @@ namespace SaveEditor.UI
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             Console.WriteLine("Closing");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            currentSaveFile_.EnableArrows();
+            MessageBox.Show("Light Arrows Flag enabled");
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Light Arrows are miss-able. If Link reaches Cloud Tops (via the whirlwind atop Veil Falls) having not rid him of the ghost, Gregal will still be sick and the Light Arrows permanently out of reach. To get the Light Arrows and the reward of 100 Mysterious Shells, Link must warp to the Tower of Winds and rid Gregal of his ghost before riding the whirlwind to Cloud Tops.\n\n" +
+                "This will enable the flag set when Link saves Gregal, allowing to get the rewards even if Link has already reached Cloud Tops.");
         }
     }
 }
